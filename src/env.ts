@@ -37,6 +37,10 @@ const envSchema = z.object({
   GUILD_ID: z.string().optional(),
   TOPGG: z.string().optional(),
   KEEP_ALIVE: z.preprocess((val) => val === "true", z.boolean().default(false)),
+  MESSAGE_ON_TRACK_START: z.preprocess(
+    (val) => val === "true",
+    z.boolean().default(false),
+  ),  
   LOG_CHANNEL_ID: z.string().optional(),
   LOG_COMMANDS_ID: z.string().optional(),
   BOT_STATUS: z.preprocess(

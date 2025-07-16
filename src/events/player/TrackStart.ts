@@ -100,14 +100,16 @@ export default class TrackStart extends Event {
         );
       }
     } else {
-      const message = await channel.send({
-        embeds: [embed],
-        components: [createButtonRow(player, this.client)],
-      });
+      if (this.client.env.MESSAGE_ON_TRACK_START == true) {
+        const message = await channel.send({
+          embeds: [embed],
+          components: [createButtonRow(player, this.client)],
+        });
 
-      player.set("messageId", message.id);
-      createCollector(message, player, track, embed, this.client, locale);
-    }
+        player.set("messageId", message.id);
+        createCollector(message, player, track, embed, this.client, locale);
+      }
+      }
   }
 }
 
