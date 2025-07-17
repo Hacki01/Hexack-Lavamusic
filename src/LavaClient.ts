@@ -14,6 +14,7 @@ const {
 const clientOptions: ClientOptions = {
   intents: [
     Guilds,
+    GuildMembers,
     GuildMessages,
     MessageContent,
     GuildVoiceStates,

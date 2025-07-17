@@ -42,6 +42,7 @@ const envSchema = z.object({
     z.boolean().default(false),
   ),  
   LOG_CHANNEL_ID: z.string().optional(),
+  LOG_EVENTS_ID: z.string().optional(),
   LOG_COMMANDS_ID: z.string().optional(),
   BOT_STATUS: z.preprocess(
     (val) => {

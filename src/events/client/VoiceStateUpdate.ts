@@ -101,6 +101,8 @@ export default class VoiceStateUpdate extends Event {
 
     async leave(newState: VoiceState, client: Lavamusic) {
       const player = client.manager.getPlayer(newState.guild.id);
+      client.logger.log(
+        `VoiceStateUpdate: ${newState.id} left the voice channel`,)
       if (!player) return;
       if (!player?.voiceChannelId) return;
       const is247 = await client.db.get_247(newState.guild.id);
