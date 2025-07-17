@@ -643,5 +643,6 @@
 	"Restart the bot": "Uruchom ponownie bota",
 	"The loop mode you want to set": "The loop mode you want to set",
 	"member_kicked": "{user} został wyrzucony z {guild} przez {executor}",
-	"member_left": "{user} opuścił {guild}"
+	"member_left": "{user} opuścił {guild}",
+	"member_banned": "{user} został zbanowany z {guild} przez {executor} za {reason}"
 }
